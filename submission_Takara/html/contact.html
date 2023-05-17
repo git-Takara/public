@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <title>conatct</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.gif" alt="ロゴ" width="200" height="100"></a>
+    
+        <div id="topnav">
+            <nav>
+                <ul>
+                    <li><a href="concept.html">concept</a></li>
+                    <li><a href="products.html">products</a></li>
+                    <li><a href="info.html">info</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <h2 id="contact_h2">contact</h2>
+
+    <form action="php/mail.php" method="post">
+        <div>
+          <label for="name">名前</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="subject">件名</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div>
+          <label for="message">メッセージ</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div>
+          <button type="submit">送信</button>
+        </div>
+      </form>
+      
+
+
+
+
+    <div id="foot">
+        <nav>
+            <ul>
+                <li><a href="guide.html">ご利用ガイド</a></li>
+                <li><a href="terms.html">ご利用規約</a></li>
+                <li><a href="labels.html">特定商品法に基づく表示</a></li>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+            </ul>
+        </nav>
+        <footer>© Foliage Plant</footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

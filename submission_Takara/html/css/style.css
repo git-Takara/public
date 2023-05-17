@@ -1,0 +1,936 @@
+@charset "utf-8";
+
+/* 基本設定 */
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    display: grid;
+
+    grid-template-columns: 10px 1fr 10px;
+
+    grid-template-rows: 
+    [head] auto
+    [title] auto
+    [concept] auto
+    [products] auto
+    [info] auto
+    [contact] auto
+    [foot] auto;
+
+    grid-row-gap: 10px;
+    row-gap: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+body > * {
+    grid-column: 2 / -2;
+}
+
+header {
+    grid-row: head;
+    width: 100%;
+    justify-self: center;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+header a {
+    display: grid;
+}
+
+header > a {
+    margin-top: 20px;
+}
+
+header a img {
+    justify-self: center;
+    align-self: center;
+    width: 30%;
+    height: auto;
+}
+
+h2 {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    color: #2c5b2c;
+    font-size: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+div#topnav {
+    grid-row: head;
+    margin-top: 30px;
+}
+
+#topnav nav {
+    justify-self: left;
+    align-self: center;
+}
+
+div#topnav nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    column-gap: 20px;
+    grid-auto-flow: column;
+}
+
+div#topnav nav a {
+    width: 18vw;
+    height: 5vw; 
+    border:solid 3px #3e5c40;
+    border-radius: 5%;
+    background-color: #fff;
+    text-align: center;
+    color: #3e5c40;
+    text-decoration: none;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: .3s;
+    align-items: center; 
+}
+
+div#topnav nav a:hover {
+    color: #fff;
+    background: #3e5c40;
+}
+
+
+.slick_demo {
+    grid-row: title;
+    padding-left: 0;
+    display: inherit;
+    margin-top: 50px;
+}
+
+div#concept {
+    grid-row: concept;
+}
+
+
+#concept h2 {
+    grid-row: concept;
+    padding-top: 20px;
+}
+
+div#concept{
+    width: auto;
+    height: auto;
+    background-color: rgb(166, 166, 166, .2) ;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+div#concept p {
+    grid-row: concept;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 150%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#concept p  span {
+    font-weight: bold;
+    color: rgb(9, 129, 0);
+}
+
+#concept_link {
+    padding-bottom: 15px;
+}
+
+p#concept_link a {
+    font-size: 1.5rem;
+}
+
+#products {
+    grid-row: products;
+    margin-top: 50px;
+}
+
+#products h2 {
+    margin-bottom: 10px;
+}
+
+#products div#fr {
+    grid-row: products;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px 10px;
+    gap: 20px 10px;
+}
+
+article a {
+    color: rgb(61, 61, 61);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#products div#box {
+    width: 60%;
+    height: 30px;
+    margin: 20px auto 20px;
+    background-color:rgb(158, 157, 157);
+}
+
+#products div#box p {
+    text-align: center;
+    padding-top: 5px;
+}
+
+#products div#box p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+#info {
+    grid-row: info;
+}
+
+#info h2 {
+    margin-top: 40px;
+}
+
+#info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#info ul li {
+    padding: 20px 0;
+    border-bottom: 1px dotted #6c5f45;
+    color: rgb(45, 45, 45);
+}
+
+#ather {
+    text-align: right;
+}
+
+#contact {
+    grid-row: contact;
+    margin-bottom: 50px;
+}
+
+#contact h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#contact div#fr2 {
+    grid-row: contact;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact div#fr2 div {
+    margin-left: 20px;
+}
+
+#contact div#fr2 div h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin:  0 auto;
+}
+
+#contact div#fr2 div p {
+    line-height: 30px;
+    margin: auto;
+    font-size: 2vw;
+}
+
+
+#contact div#fr2 div div#box2 {
+    width: 70%;
+    height: 15%;
+    margin: 0 auto 0;
+    background-color:rgb(158, 158, 158);
+}
+
+#contact div#fr2 div div#box2 p {
+    text-align: center;
+}
+
+#contact div#fr2 div div#box2 p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+#foot {
+    grid-row: foot;
+}
+
+div#foot nav{
+    background-color: rgb(141, 141, 141);
+}
+
+#foot nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: block;
+}
+
+#foot nav ul li {
+    border: solid 1px rgb(45, 45, 45);
+    line-height: 30px;
+    padding: 5px 0;
+}
+
+#foot nav ul li:not(:first-child) {
+    border-top: none;
+  }
+
+#foot nav ul li a {
+    height: 0;
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin: 20px auto 20px;
+}
+
+/* 基本設定ココまで */
+
+
+
+/* コンセプト設定 */
+
+#concept_h2 {
+    grid-row: title;
+    padding-top: 50px;
+}
+
+#photo_img {
+    grid-row: concept;
+    display: flex;
+}
+
+.left img,
+.right img,
+.bottom img {
+    width: 120%;
+    height: auto;
+    border-radius: 5%;
+    border: 0.3rem solid #747474;
+}
+
+.left {
+    margin-top: 8%;
+    opacity:0;
+    animation-name: fadeIn_left;
+    animation-duration:2s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn_left {
+    0% {opacity: 0;
+    transform: translateX(-30vw);
+}
+    100% {opacity: 1;
+    transform: translateX(10vw);
+    }
+}
+
+.right {
+    margin-top: 13%;
+    opacity:0;
+    animation-name: fadeIn_right;
+    animation-duration:2s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn_right {
+    0% {opacity: 0;
+    transform: translateX(50vw);
+}
+    100% {opacity: 1;
+    transform: translateX(20vw);
+    }
+}
+
+.bottom {
+    margin-top: 51%;
+    opacity:0;
+    animation-name: fadeIn_bottom;
+    animation-duration:2s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn_bottom {
+    0% {opacity: 0;
+    transform: translateX(-80vw);
+}
+    100% {opacity: 1;
+    transform: translateX(-38vw);
+    }
+}
+
+#message_owner {
+    grid-row: products;
+}
+
+#message_owner {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+#message_owner h3 {
+    text-align: center;
+    margin: 10% auto 5%;
+    color: rgb(61, 61, 61);
+}
+
+#message_owner p {
+  margin-bottom: 2em;
+  color: rgb(61, 61, 61);
+  font-size: 16px;
+}
+
+#message_owner ul {
+  margin: 10px 0;
+  padding-left: 20px;
+   margin-bottom: 30px;
+}
+
+#message_owner li {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+#shop_name p {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+
+/* コンセプト設定ココまで */
+
+
+
+/* プロダクト設定 */
+
+#products_h2 {
+    grid-row: title;
+    padding-top: 50px;
+}
+
+#images {
+    grid-row: concept;
+    width: 100%;
+    height: auto;
+
+}
+
+#images div.inner_clearfix {
+    margin-top: 50px;
+    position: relative;
+}
+
+#images p {
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+}
+
+#images p img {
+    display: block;
+    width: 100%;
+}
+
+#images p strong {
+    position: absolute;
+    display: block;
+    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: rgba(93, 93, 93, 0.5);
+    text-align: left;
+    padding: 20px;
+    opacity: 0;
+}
+
+#images p span {
+    position: absolute;
+    display: block;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6),
+                inset 0 0 100px rgba(50, 30, 0, 0.3);
+    background:rgb(224, 250, 51, 0.2) ;
+    opacity: 0;
+}
+
+#images strong {
+    opacity: 0;
+    transition: opacity 0.3 ease;
+}
+
+/* プロダクト設定ココまで */
+
+
+
+/* インフォ設定 */
+
+#info_h2 {
+    grid-row: title;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#page_info {
+    grid-row: concept;
+}
+
+#page_info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#page_info ul li {
+    padding: 20px 0;
+    border-bottom: 1px dotted #6c5f45;
+    color: rgb(45, 45, 45);
+}
+
+/* インフォ設定ココまで */
+
+
+
+/* コンタクト設定 */
+#contact_h2 {
+    grid-row: title;
+    padding-top: 50px;
+}
+
+form {
+    grid-row: concept;
+}
+  
+form div {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+form div label {
+    color: #393939e5;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+form div input[type="text"],
+form div input[type="email"],
+form div textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+    /* max-width: 100%; */
+}
+  
+form div textarea {
+    width: 90%;
+    height: 150px;
+}
+  
+form div button[type="submit"] {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3e5c40;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+  
+form div button[type="submit"]:hover {
+    background-color: #344f36;
+}
+
+#message {
+    width: 90%;
+}
+  
+
+/* コンタクト設定ここまで */
+
+/* フッター_アイキャッチ画像設定 */
+#eyecatch {
+    grid-row: title;
+    place-items: center;
+    position: relative;
+    height: 100%;
+}
+
+#eyecatch img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+h2#eyecatch_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    grid-row: 2;
+}
+/* フッターナビ設定ココまで */
+
+/* ガイド設定 */
+
+#guide_body {
+    grid-row: concept;
+    margin: 20px;
+}
+
+#guide_body h2 {
+    text-align: left;
+    margin: 1rem auto 1rem ;
+    font-size: 20px;
+}
+
+#guide_body p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* ガイド設定ここまで */
+/* 規約設定 */
+
+#terms_body {
+    grid-row: concept;
+    margin: 20px;
+}
+
+#terms_body h2 {
+    text-align: left;
+    margin: 1rem auto 1rem ;
+    font-size: 20px;
+}
+
+#terms_body p {
+    color: #666;
+    font-size: 16px;
+}
+/* 規約設定ここまで */
+/* 商品法に基づく表示設定 */
+
+#labels_body {
+    grid-row: concept;
+    margin: 20px;
+}
+
+#labels_body h2 {
+    text-align: left;
+    margin: 1rem auto 1rem ;
+    font-size: 20px;
+}
+
+#labels_body p {
+    color: #666;
+    font-size: 16px;
+}
+/* 商品法に基づく表示設定ここまで */
+/* プライバシーポリシー設定 */
+
+#privacy_body {
+    grid-row: concept;
+    margin: 20px;
+}
+
+#privacy_body h2 {
+    text-align: left;
+    margin: 1rem auto 1rem ;
+    font-size: 20px;
+}
+
+#privacy_body p {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* プライバシーポリシー設定ここまで */
+
+
+
+/* PC版の設定 */
+@media(min-width:769px){
+
+/* 基本設定 */
+img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+body {
+    grid-template-columns:0.2fr repeat(6,1fr) 0.2fr;
+    grid-column-gap: 5%;
+    grid-template-rows:
+    [head] 100px
+    [title] auto
+    [concept] auto
+    [products] auto
+    [info] auto
+    [contact] auto
+    [foot] 100px;
+
+    max-width: 100%;
+
+}
+
+header {
+    width: 100%;
+    height: 120%;
+    justify-self: start;
+    position: relative;
+    display: inherit;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+header a {
+    justify-self: start;
+}
+
+header a img{
+    justify-self: start;
+    width: 100%;
+    height: auto;
+}
+
+div#topnav {
+    grid-row: head;
+    margin-top: 0;
+}
+
+div#topnav {
+    justify-self: end;
+    align-self: center;
+    margin-top: -80px;
+}
+
+div#topnav nav a {
+    width: 100px;
+    height: 30px; 
+    font-size: 18px;
+
+}
+
+div#concept p {
+    font-size: 2vw;
+}
+
+div#photo_img {
+    width: 60%;
+    height: auto;
+}
+
+.left {
+    margin-top: 8%;
+    opacity:0;
+    animation-name: fadeIn_left;
+    animation-duration:2s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn_left {
+    0% {opacity: 0;
+    transform: translateX(-30vw);
+}
+    100% {opacity: 1;
+    transform: translateX(25vw);
+    }
+}
+
+.right {
+    margin-top: 13%;
+    opacity:0;
+    animation-name: fadeIn_right;
+    animation-duration:2s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn_right {
+    0% {opacity: 0;
+    transform: translateX(50vw);
+}
+    100% {opacity: 1;
+    transform: translateX(30vw);
+    }
+}
+
+.bottom {
+    margin-top: 51%;
+    opacity:0;
+    animation-name: fadeIn_bottom;
+    animation-duration:2s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn_bottom {
+    0% {opacity: 0;
+    transform: translateX(-80vw);
+}
+    100% {opacity: 1;
+    transform: translateX(0vw);
+    }
+}
+
+
+#contact div#fr2 div p {
+    margin-top: 5%;
+    font-size: 2vw;
+    padding-top: 5%;
+    line-height: 3vw;
+}
+
+#contact div#fr2 div div#box2 {
+    width: 50%;
+    height: 10%;
+}
+
+#contact div#fr2 div div#box2 p {
+    margin-top: 30px;
+    line-height: 1vw;
+}
+
+#foot nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+}
+
+#foot nav ul li:not(:first-child) {
+    border-top: solid 1px rgb(45, 45, 45);
+}
+
+#foot nav ul li:not(:last-child) {
+    border-right: none;
+}
+
+h2#eyecatch_title {
+    font-size: 3vw;
+}
+
+/* 基本設定ココまで */
+
+
+
+/* コンセプト設定 */
+
+#message {
+    padding: 10px;
+}
+
+/* コンセプト設定ココまで */
+
+
+
+/* プロダクト設定 */
+
+#images .inner_clearfix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text {
+    position: absolute;
+    top: 18vw;
+    left: 55%;
+    transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    line-height: 4vw;
+}
+
+
+
+/* プロダクト設定ココまで */
+
+
+
+/* インフォ設定 */
+
+form div input[type="text"],
+form div input[type="email"],
+form div textarea {
+    width: 300px;
+    max-width: 100%;
+}
+
+#message {
+    width: 80%;
+}
+
+/* インフォ設定ココまで */
+
+
+
+/* コンタクト設定 */
+form div input[type="text"],
+form div input[type="email"],
+form div textarea {
+    width: 40%;
+}
+
+#message {
+    width: 80%;
+}
+
+/* コンタクト設定ここまで */
+
+/* ガイド設定 */
+/* ガイド設定ここまで */
+/* 規約設定 */
+/* 規約設定ここまで */
+/* 商品法に基づく表示設定 */
+/* 商品法に基づく表示設定ここまで */
+/* プライバシーポリシー設定 */
+/* プライバシーポリシー設定ここまで */
+
+} /* @mediaend */
